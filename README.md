@@ -16,3 +16,39 @@ Please replace %USERPROFILE%\Desktop with the actual path of your Desktop if itâ
 Remember to save this script with a .bat or .cmd extension to run it. You can double-click the saved batch file to execute it.
 
 Disclaimer: This script is provided as is, without warranty of any kind. Use of this script is at your own risk and responsibility. Always make sure to backup your data before running scripts that modify file systems.
+
+**KEY IMPROVEMENTS:**
+
+Enhanced File Type Handling:
+
+Reads mappings from config.txt (format: .ext,FolderName).
+Creates subfolders dynamically based on file types.
+Improved User Experience:
+
+Logs successful file movements.
+Added a progress bar (using robocopy /tee).
+Displays messages when files are skipped due to size limits.
+Advanced Filtering and Sorting:
+
+Uses robocopy to filter by file size (/minsize) while moving.
+Includes date-based sorting by creating folders with the current date.
+Uses robocopy to move and log the file operations.
+Additional Features:
+
+Placeholder comments for future implementation of scheduling, undo, and cloud sync.
+How to Use:
+
+Create config.txt: In the same directory as your batch script, create a config.txt file with lines like:
+
+.txt,Documents
+.jpg,Images
+.mp3,Music
+Set Size Limit: Add the size limit of the files in bytes (e.g., 10485760 for 10 MB) on the first line of config.txt.
+
+Run the Script: Execute the batch script from the Command Prompt or PowerShell.
+
+Remember:
+
+Customize the config.txt file to match your desired file type mappings.
+Fill in the implementations for scheduling, undo, and cloud sync if needed.
+Thoroughly test the script before using it on your actual desktop.
